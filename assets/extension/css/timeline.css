@@ -1,0 +1,208 @@
+/**
+ _   __ __ _____ _____ ___  ____  _____
+| | / // // ___//_  _//   ||  __||_   _|
+| |/ // /(__  )  / / / /| || |     | |
+|___//_//____/  /_/ /_/ |_||_|     |_|
+@link https://vistart.name/
+@copyright Copyright (c) 2016 vistart
+@license https://vistart.name/license/
+*/
+/* 
+    Created on : 2016-4-11, 18:27:36
+    Author     : vistart <i@vistart.name>
+*/
+@font-face {
+	font-family: 'ecoico';
+	src:url('ecoico.eot');
+	src:url('ecoico.eot?#iefix') format('embedded-opentype'),
+		url('ecoico.woff') format('woff'),
+		url('ecoico.ttf') format('truetype'),
+		url('ecoico.svg#ecoico') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.rhoone_task_timeline {
+	margin: 30px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+} 
+
+/* The line */
+.rhoone_task_timeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	background: #ededed none repeat scroll 0 0 !important;
+	left: 20%;
+	margin-left: -10px;
+}
+
+.rhoone_task_timeline > li {
+	position: relative;
+}
+
+/* The date/time */
+.rhoone_task_timeline > li .rhoone_task_time {
+	display: block;
+	width: 25%;
+	padding-right: 100px;
+	position: absolute;
+}
+
+.rhoone_task_timeline > li .rhoone_task_time span {
+	display: block;
+	text-align: right;
+        font-family: "Open Sans",sans-serif;
+}
+
+.rhoone_task_timeline > li .rhoone_task_time span:first-child {
+	font-size: 0.9em;
+	color: #555;
+}
+
+.rhoone_task_timeline > li .rhoone_task_time span:last-child {
+	font-size: 2.9em;
+	color: #555;
+}
+
+.rhoone_task_timeline > li:nth-child(odd) .rhoone_task_time span:last-child {
+	color: #55;
+}
+
+/* Right content */
+.rhoone_task_timeline > li .rhoone_task_label {
+	margin: 0 0 15px 25%;
+	/* background: #3594cb; */
+	/* color: #fff; */
+	padding: 2em;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 1.4;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 0 0 3px #97d271;
+}
+
+.rhoone_task_timeline > li:nth-child(odd) .rhoone_task_label {
+	/* background: #6cbfee;*/
+}
+
+.rhoone_task_timeline > li .rhoone_task_label h2 { 
+	margin-top: 0px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* The triangle */
+.rhoone_task_timeline > li .rhoone_task_label:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: #97d271;
+	border-width: 10px;
+	top: 10px;
+}
+
+.rhoone_task_timeline > li:nth-child(odd) .rhoone_task_label:after {
+	border-right-color: #97d271;
+}
+
+/* The icons */
+.rhoone_task_timeline > li .rhoone_task_icon {
+	width: 40px;
+	height: 40px;
+	font-family: 'ecoico';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	font-size: 1.4em;
+	line-height: 40px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	color: #fff;
+	background: #708fa0 !important;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px #97d271;
+	text-align: center;
+	left: 20%;
+	top: 0;
+	margin: 0 0 0 -25px;
+}
+
+.rhoone_task_icon-phone:before {
+	content: "\e000";
+}
+
+.rhoone_task_icon-screen:before {
+	content: "\e001";
+}
+
+.rhoone_task_icon-mail:before {
+	content: "\e002";
+}
+
+.rhoone_task_icon-earth:before {
+	content: "\e003";
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+	.rhoone_task_timeline > li .rhoone_task_time span:last-child {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 47.2em) {
+	.rhoone_task_timeline:before {
+		display: none;
+	}
+
+	.rhoone_task_timeline > li .rhoone_task_time {
+		width: 100%;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	.rhoone_task_timeline > li .rhoone_task_time span {
+		text-align: left;
+	}
+
+	.rhoone_task_timeline > li .rhoone_task_label {
+		margin: 0 0 30px 0;
+		padding: 1em;
+		font-weight: 400;
+		font-size: 95%;
+	}
+
+	.rhoone_task_timeline > li .rhoone_task_label:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		border-bottom-color: #3594cb;
+		top: -20px;
+	}
+
+	.rhoone_task_timeline > li:nth-child(odd) .rhoone_task_label:after {
+		border-right-color: transparent;
+		border-bottom-color: #6cbfee;
+	}
+
+	.rhoone_task_timeline > li .rhoone_task_icon {
+		position: relative;
+		float: right;
+		left: auto;
+		margin: -55px 5px 0 0px;
+	}	
+}
+

@@ -12,6 +12,9 @@
 
 namespace rhoone\task;
 
+use rhoone\task\TaskController;
+use Yii;
+
 /**
  * Description of Extension
  *
@@ -20,8 +23,21 @@ namespace rhoone\task;
 class Extension extends \rhoone\extension\Extension
 {
 
+    public static function extensionName()
+    {
+        return "Task";
+    }
+
     public function search($keywords)
     {
-        
+        return Yii::$app->runAction('/rhoone-task/task/list');
+    }
+
+    public static function getModule()
+    {
+        return [
+            'class' => Module::className(),
+            'id' => 'rhoone-task',
+        ];
     }
 }
