@@ -12,7 +12,6 @@
 
 namespace rhoone\task;
 
-use rhoone\task\TaskController;
 use Yii;
 
 /**
@@ -23,7 +22,7 @@ use Yii;
 class Extension extends \rhoone\extension\Extension
 {
 
-    public static function extensionName()
+    public static function name()
     {
         return "Task";
     }
@@ -31,6 +30,17 @@ class Extension extends \rhoone\extension\Extension
     public function search($keywords)
     {
         return Yii::$app->runAction('/rhoone-task/task/list');
+    }
+    
+    public static function getDictionary()
+    {
+        return [
+            'task' => [
+                'task',
+                '任务',
+                'タスク',
+            ],
+        ];
     }
 
     public static function getModule()
