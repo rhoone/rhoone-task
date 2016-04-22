@@ -21,11 +21,11 @@ class TaskController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->renderPartial('index');
+        return $this->renderAjax('index');
     }
     
     public function actionList()
     {
-        return $this->renderPartial('list');
+        return $this->renderAjax('list');
     }
 }

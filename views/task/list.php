@@ -10,7 +10,7 @@
  * @license https://vistart.name/license/
  */
 use rhoone\task\assets\ExtensionAsset;
-
+/* @var $this yii\web\View */
 ExtensionAsset::register($this);
 ?>
 <ul class="rhoone_task_timeline">

@@ -12,7 +12,7 @@
 
 namespace rhoone\task\assets;
 
-use yii\web\AssetBundle;
+use rhoone\extension\AssetBundle;
 
 /**
  * Description of ExtensionAsset
@@ -21,6 +21,7 @@ use yii\web\AssetBundle;
  */
 class ExtensionAsset extends AssetBundle
 {
+
     public $sourcePath = "@rhoone/task/assets/extension";
     public $baseUrl = '@web';
     public $css = [
@@ -31,4 +32,5 @@ class ExtensionAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
     ];
+
 }

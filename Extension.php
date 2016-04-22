@@ -21,6 +21,10 @@ use Yii;
  */
 class Extension extends \rhoone\extension\Extension
 {
+    public static function id()
+    {
+        return "task";
+    }
 
     public static function name()
     {
