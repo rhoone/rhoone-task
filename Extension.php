@@ -38,13 +38,7 @@ class Extension extends \rhoone\extension\Extension
     
     public static function getDictionary()
     {
-        return [
-            'task' => [
-                'task',
-                '任务',
-                'タスク',
-            ],
-        ];
+        return new Dictionary();
     }
 
     public static function getModule()
