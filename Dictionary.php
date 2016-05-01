@@ -26,7 +26,7 @@ class Dictionary extends \rhoone\extension\Dictionary
             [
                 0 => 'task',
                 '任务',
-                'タスク',
+                '任務',
             ],
         ];
     }
